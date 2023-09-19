@@ -43,8 +43,6 @@ print(emoji)
   
 if guess_word != secret_word:
     print("Not quite. Play again soon!")
-    exit()
 
 else:
     print("Woo! You got it!")
-    exit()
