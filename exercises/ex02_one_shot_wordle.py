@@ -4,7 +4,7 @@ __author__ = "730658974"
 
 # part 1.
 secret_word: str = "python"
-guess_word: str = input(f"What is your " + {len(secret_word)} + "-letter guess? ")
+guess_word: str = input(f"What is your {len(secret_word)}-letter guess? ")
 
 # part 2. Chencking indices.
 WHITE_BOX: str = "\U00002B1C"
@@ -13,7 +13,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 # Check the number of characters.
 while len(guess_word) != len(secret_word):
-    guess_word = input(f"That was not " + {len(secret_word)} + " letters! Try again: ")
+    guess_word = input(f"That was not {len(secret_word)} letters! Try again: ")
 
 # Part 2.
 word_idx: int = 0
