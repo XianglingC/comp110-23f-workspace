@@ -4,25 +4,27 @@ __author__ = "730658974"
 
 
 # Part 4. Main_function
-def main () -> None:
+def main() -> None:
     """The entrypoint of the program and main game loop."""
     # Your code will go here
     secret_word: str = "codes"
     turns: int = 1
     while turns <= 6:
-        print (f"===Turn {turns}/6 ===")
+        print(f"=== Turn {turns}/6 ===")
         user_guess: str = input_guess(len(secret_word))
         emoji_result: str = emojified(user_guess, secret_word)
-        print (emoji_result)
+        print(emoji_result)
 
         if user_guess == secret_word:
             response: str = (f"You won in {turns}/6 turns!")
-            print (response)
+            print(response)
+            return
         # Something must change in the while loop
         turns += 1
     if turns == 7:
-        response_2: str = print ("X/6 - Sorry, try again tomorrow!") 
-        print (response_2)
+        response_2: str = ("X/6 - Sorry, try again tomorrow!") 
+        print(response_2)
+        return
 
 
 # Part 1. Based on EX02 define the function
@@ -75,4 +77,4 @@ def input_guess(expected_length: int) -> str:
  
 
 if __name__ == "__main__":
-    main ()
+    main()
