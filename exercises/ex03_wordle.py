@@ -18,7 +18,7 @@ def main () -> None:
         if user_guess == secret_word:
             response: str = (f"You won in {turns}/6 turns!")
             print (response)
-        # something must change in the while loop
+        # Something must change in the while loop
         turns += 1
     if turns == 7:
         response_2: str = print ("X/6 - Sorry, try again tomorrow!") 
@@ -27,7 +27,7 @@ def main () -> None:
 
 # Part 1. Based on EX02 define the function
 def contains_char(string1: str, single_charactor: str) -> bool:
-    """define the function that has 2 parameters for the checking process."""
+    """Define the function that has 2 parameters for the checking process."""
     alternate_idx: int = 0
     character_existence: bool = False
     assert len(single_charactor) == 1
@@ -67,12 +67,12 @@ def emojified(guess: str, secret: str) -> str:
 
 # Part 3. input_guess
 def input_guess(expected_length: int) -> str:
-    """prompt the user finding the correct length."""
+    """Prompt the user finding the correct length."""
     user_input: str = input(f"Enter a {expected_length} character word: ")
     while len(user_input) != expected_length:
         user_input = input(f"That wasn't {expected_length} chars! Try again: ")
     return user_input
  
- 
+
 if __name__ == "__main__":
     main ()
