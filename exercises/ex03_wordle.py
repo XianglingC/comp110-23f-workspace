@@ -52,7 +52,7 @@ def input_guess(expected_length: int) -> str:
     return user_input
  
 
- # Part 4. Main_function
+# Part 4. Main_function
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     # Your code will go here
@@ -73,6 +73,7 @@ def main() -> None:
         response_2: str = ("X/6 - Sorry, try again tomorrow!") 
         print(response_2)
         return
+
 
 if __name__ == "__main__":
     main()
