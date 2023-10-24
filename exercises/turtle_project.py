@@ -1,12 +1,14 @@
 """TODO: Really simple version of go to the light house."""
 __author__: str = "730658974"
 
+from turtle import Turtle, colormode, done
+import random
+
 """The final 15% of the project: 
 1. random: please see the draw_square function(startfrom line40)
 2. new function/knowledge from the doc: please see the draw_circle and draw_semicircle part(the last two function).
     (lines 96 and 122)."""
 
-from turtle import Turtle, colormode, done
 
 def main() -> None:
     """The entrypoint of my scene."""
@@ -37,23 +39,23 @@ def main() -> None:
     draw_semicircle(ertle, 50, -135, 35)
     done()
 
+
 def draw_square(a_turtle: Turtle, x: float, y: float, width: float) -> None:
-    """Draw a square of the given width"""
+    """Draw a square of the given width."""
     colormode(225)
     """Wanting to use random color for the color in this part."""
-    import random
-    """Introducing the string and the list for the random"""
-    """I understand this function and how to use this by looking at this website: https://pynative.com/python-random-choice/"""
+    """Introducing the string and the list for the random."""
+    """I understand this function and how to use this by looking at this website: https://pynative.com/python-random-choice/."""
     colors: list[str] = ["green", "blue", "orange", "grey"]
     selected_color = random.choice(colors)
     a_turtle.penup()
-    a_turtle.goto(x,y)
+    a_turtle.goto(x, y)
     a_turtle.setheading(0)
     a_turtle.pendown()
     a_turtle.speed(50)
     a_turtle.color(selected_color)
     a_turtle.begin_fill()
-    i:int = 0
+    i: int = 0
     while i < 4:
         a_turtle.forward(width)
         a_turtle.right(90)
@@ -61,12 +63,12 @@ def draw_square(a_turtle: Turtle, x: float, y: float, width: float) -> None:
     a_turtle.end_fill()
 
 
-def draw_rectangle(a_turtle: Turtle, x: float, y: float, width: float,length: float) -> None:
-    """Draw the body of the light house"""
+def draw_rectangle(a_turtle: Turtle, x: float, y: float, width: float, length: float) -> None:
+    """Draw the body of the light house."""
     colormode(225)
     a_turtle.penup()
-    a_turtle.goto(x,y)
-    a_turtle.setheading(0) # magic plus
+    a_turtle.goto(x, y)
+    a_turtle.setheading(0)
     a_turtle.pendown()
     a_turtle.pencolor("pink")
     a_turtle.fillcolor("brown")
@@ -80,12 +82,13 @@ def draw_rectangle(a_turtle: Turtle, x: float, y: float, width: float,length: fl
         i += 1
     a_turtle.end_fill()
 
+
 def draw_tringle(a_turtle: Turtle, x: float, y: float) -> None:
-    """Draw the head of the light house"""
+    """Draw the head of the light house."""
     colormode(225)
     a_turtle.penup()
-    a_turtle.goto(x,y)
-    a_turtle.setheading(0) # magic plus
+    a_turtle.goto(x, y)
+    a_turtle.setheading(0)
     a_turtle.pendown()
     a_turtle.fillcolor("grey")
     a_turtle.begin_fill()
@@ -96,24 +99,26 @@ def draw_tringle(a_turtle: Turtle, x: float, y: float) -> None:
         i += 1
     a_turtle.end_fill()
 
+
 def draw_circle(a_turtle: Turtle, x: float, y: float, radius: float) -> None:
-    """Draw the light by using circle"""
+    """Draw the light by using circle."""
     colormode(225)
     a_turtle.penup()
-    a_turtle.goto(x,y)
-    a_turtle.setheading(0) # magic plus
+    a_turtle.goto(x, y)
+    a_turtle.setheading(0)
     a_turtle.pendown()
     a_turtle.fillcolor("yellow")
     a_turtle.begin_fill()
     a_turtle.circle(radius)
     a_turtle.end_fill()
 
+
 def draw_cloud(a_turtle: Turtle, x: float, y: float, radius: float) -> None:
-    """Draw the cloud using several circles"""
+    """Draw the cloud using several circles."""
     colormode(225)
     a_turtle.penup()
-    a_turtle.goto(x,y)
-    a_turtle.setheading(0) # magic plus
+    a_turtle.goto(x, y)
+    a_turtle.setheading(0)
     a_turtle.pendown()
     a_turtle.pencolor("blue")
     a_turtle.fillcolor("blue")
@@ -122,11 +127,12 @@ def draw_cloud(a_turtle: Turtle, x: float, y: float, radius: float) -> None:
     a_turtle.circle(radius)
     a_turtle.end_fill()
 
+
 def draw_semicircle(a_turtle: Turtle, x: float, y: float, radius: float) -> None:
     """Draw the very very simple boat by using the semicircle."""
     colormode(225)
     a_turtle.penup()
-    a_turtle.goto(x,y)
+    a_turtle.goto(x, y)
     a_turtle.setheading(270)
     a_turtle.pendown()
     a_turtle.pencolor("red")
@@ -135,6 +141,7 @@ def draw_semicircle(a_turtle: Turtle, x: float, y: float, radius: float) -> None
     """Wanting to use semicircle to draw the boat, but I don't think this is a beautiful one."""
     a_turtle.circle(radius, 180)
     a_turtle.end_fill()
+
 
 if __name__ == "__main__":
     main()
