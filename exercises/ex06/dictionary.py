@@ -5,7 +5,7 @@ __author__ = "730658974"
 # Function1: invert
 def invert(x: dict[str, str]) -> dict[str, str]:
     """The key list of input list becomes the values of the output list and vice versa."""
-    new_dict: dict = {}
+    new_dict: dict[str, str] = {}
     for key in x:
         value: str = x[key]
         if value in new_dict:
