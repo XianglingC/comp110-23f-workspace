@@ -14,7 +14,6 @@ def invert(x: dict[str, str]) -> dict[str, str]:
     return new_dict
 
 
-
 # Favorite colors
 def favorite_color(names_colors: dict[str, str]) -> str:
     """Compare the frequency of the color in the dict."""
