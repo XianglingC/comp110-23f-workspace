@@ -1,3 +1,4 @@
+"""Dictionary practice."""
 __author__ = "730658974"
 
 
@@ -7,10 +8,11 @@ def invert(x: dict[str, str]) -> dict[str, str]:
     new_dict: dict = {}
     for key in x:
         value: str = x[key]
-        new_dict[value] = key
         if value in new_dict:
             raise KeyError("error message of your choice here!")
+        new_dict[value] = key
     return new_dict
+
 
 
 # Favorite colors
@@ -34,8 +36,7 @@ def favorite_color(names_colors: dict[str, str]) -> str:
 
 # Count
 def count(counter: list[str]) -> dict[str, int]:
-    """Key: unique value in the given list, value: count of the number of times that value
-    appeared in the input."""
+    """Return the number of apperence."""
     store: dict[str, int] = {}
     for item in counter:
         if item in store:
