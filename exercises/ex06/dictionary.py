@@ -47,14 +47,16 @@ def count(counter: list[str]) -> dict[str, int]:
 
 # Alphabetizer
 def alphabetizer(str_list: list[str]) -> dict[str, list[str]]:
-    """Sort the words in list with the same capital letter."""
+    """Sort the words in the list with the same initial letter."""
     new_dict: dict[str, list[str]] = {}
     for elem in str_list:
-        if elem[0].lower() not in new_dict:
-            new_dict[elem[0]] = [elem]  # Create a new list with elem as its first element
+        initial_letter = elem[0].lower()
+        if initial_letter not in new_dict:
+            new_dict[initial_letter] = [elem]
         else:
-            new_dict[elem[0].lower()].append(elem)  # Append elem to the existing list in new_dict
+            new_dict[initial_letter].append(elem)
     return new_dict
+
 
 
 # Update attendance
