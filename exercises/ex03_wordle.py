@@ -9,7 +9,7 @@ def contains_char(string1: str, single_charactor: str) -> bool:
     alternate_idx: int = 0
     character_existence: bool = False
     assert len(single_charactor) == 1
-    while not character_existence and alternate_idx < len(string1):
+    while not character_existence and alternate_idx mk< len(string1):
         if string1[alternate_idx] == single_charactor:
             character_existence = True
         else:
