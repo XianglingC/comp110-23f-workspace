@@ -109,5 +109,5 @@ def test_update_attendance_use_case2() -> None:
 # COUNT_TEST3
 def test_update_attendance_edge_case() -> None:
     """unit test15."""
-    attendance_log: dict = {}
-    assert update_attendance(attendance_log, "Wednesday", "Kaleb") == {"Wednesday": ["Kaleb"]}
+    attendance_log: dict = {"Monday": ["Anna"]}
+    assert update_attendance(attendance_log, "Monday", "Anna") == {"Monday": ["Anna"]}

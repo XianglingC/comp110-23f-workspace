@@ -65,5 +65,7 @@ def update_attendance(x: dict[str, list[str]], day_of_week: str, attendance: str
     if day_of_week not in x:
         x[day_of_week] = [attendance]
     else:
-        x[day_of_week].append(attendance)
+        if attendance not in x[day_of_week]:
+            x[day_of_week].append(attendance)
     return x
+
