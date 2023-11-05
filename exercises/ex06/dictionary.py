@@ -58,7 +58,6 @@ def alphabetizer(str_list: list[str]) -> dict[str, list[str]]:
     return new_dict
 
 
-
 # Update attendance
 def update_attendance(x: dict[str, list[str]], day_of_week: str, attendance: str) -> dict[str, list[str]]:
     """Update attendance."""
@@ -68,4 +67,3 @@ def update_attendance(x: dict[str, list[str]], day_of_week: str, attendance: str
         if attendance not in x[day_of_week]:
             x[day_of_week].append(attendance)
     return x
-
